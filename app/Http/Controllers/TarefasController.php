@@ -133,8 +133,8 @@ class TarefasController extends Controller {
     }
 	
 	public function reorder(){
-		return response()->view('tarefas.index')->setStatusCode(200);
+		//return response()->view('tarefas.index')->setStatusCode(200);
 				
-		//return DB::table('tarefas')->where('id', '=', $itemId)->update('ordem' => $ordem);
+		return DB::table('tarefas')->where('id', '=', $itemId)->update('ordem' => $ordem);
 	}
 }
